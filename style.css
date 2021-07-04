@@ -1,27 +1,30 @@
-.list {text-align: center; margin-top: 10px;}
+section {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu {background-color: #dff9fb; padding: 20px; text-align: center; width: 200px;}
+
+.nowColor {margin-bottom: 20px;}
+
+.nowColor span {width: 20px; height: 20px; background-color: #2d3436; display: inline-block;}
+
+i {padding: 20px; cursor: pointer; transition: .5s;}
+
+i:hover {filter: invert(70%);}
+
+.list {list-style: none; padding: 0;}
 
 .li {
     display: inline-block;
-    padding: 20px;
-    margin: 0 20px;
-    font-size: 1.5em;
     cursor: pointer;
-    border-radius: 20px;
-    color: #fff;
+    width: 20px;
+    height: 20px;
 }
-
-.clear {color: #2d3436;}
-
-.black {background-color: #2d3436;}
-.red {background-color: #d63031;}
-.blue {background-color: #0984e3;}
-.white {background-color: #ffffff; color: #2d3436; border: 1px solid #2d3436;}
-.yellow {background-color: #f9ca24;}
-.green {background-color: #2ecc71;}
 
 .canvas {
     display: block;
-    margin: 0 auto;
     background-color: #f1f2f6;
     width: 1200px;
     height: 600px;

@@ -7,16 +7,27 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
 </head>
 <body>
-    <canvas class="canvas"></canvas>
-    <div class="list">
-        <div class="li black">black</div>
-        <div class="li white">white</div>
-        <div class="li blue">blue</div>
-        <div class="li red">red</div>
-        <div class="li green">green</div>
-        <div class="li yellow">yellow</div>
-        <div class="li clear"><i class="fas fa-trash-alt"></i></div>
-    </div>
+    <section>
+        <div class="menu">
+            <ul class="list">
+                <li class="li blue" style="background-color: #0984e3;"></li>
+                <li class="li red" style="background-color: #d63031;"></li>
+                <li class="li yellow" style="background-color: #f9ca24;"></li>
+                <li class="li green" style="background-color: #2ecc71;"></li>
+                <li class="li black" style="background-color: #2d3436;"></li>
+                <li class="li white" style="background-color: #ffffff;"></li>
+            </ul>
+            <div class="nowColor">
+                현재 색상 : 
+                <span style="background-color: #2d3436;"></span>
+            </div>
+            <i class="fas fa-eraser"></i>
+            <i class="fas fa-trash-alt"></i>
+            <i class="fas fa-fill-drip"></i>
+            <input type="range" class="inputSize" min="3" max="15" value="3">
+        </div>
+        <canvas class="canvas"></canvas>
+    </section>
 </body>
 <script src="script.js"></script>
 </html>
