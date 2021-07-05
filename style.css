@@ -1,26 +1,41 @@
+body {background-color: #3B3B5B;}
+
 section {
-    width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 99%;
 }
 
-.menu {background-color: #dff9fb; padding: 20px; text-align: center; width: 200px;}
+.menu {background-color: #F8F7FD; padding: 20px; text-align: center; width: 200px;}
 
-.nowColor {margin-bottom: 20px;}
+.nowColor {margin-bottom: 20px; margin-top: 20px; position: relative;}
 
-.nowColor span {width: 20px; height: 20px; background-color: #2d3436; display: inline-block;}
+.nowColor span {
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    background-color: #2d3436;
+    display: inline-block; 
+    border: 1px solid #2d3436;
+    position: absolute;
+    left: 75%;
+}
 
-i {padding: 20px; cursor: pointer; transition: .5s;}
+i {padding: 10px; cursor: pointer; transition: .5s; margin: 10px 0;}
 
 i:hover {filter: invert(70%);}
 
-.list {list-style: none; padding: 0;}
+.list {list-style: none; padding: 0; margin: 0; background-color: #ced6e0; padding: 10px;}
 
 .li {
     display: inline-block;
     cursor: pointer;
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
 }
 
 .canvas {
