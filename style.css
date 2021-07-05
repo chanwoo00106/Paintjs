@@ -28,7 +28,7 @@ i {padding: 10px; cursor: pointer; transition: .5s; margin: 10px 0;}
 
 i:hover {filter: invert(70%);}
 
-.list {list-style: none; padding: 0; margin: 0; background-color: #ced6e0; padding: 10px;}
+.list {list-style: none; padding: 0; margin: 0; background-color: #dff9fb; padding: 10px;}
 
 .li {
     display: inline-block;
@@ -36,6 +36,12 @@ i:hover {filter: invert(70%);}
     width: 30px;
     height: 30px;
     border-radius: 50px;
+    transition: .3s;
+}
+
+li:hover {
+    width: 35px;
+    height: 35px;
 }
 
 .canvas {

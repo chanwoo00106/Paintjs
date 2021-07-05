@@ -7,6 +7,7 @@ const trash = document.querySelector(".fa-trash-alt");
 const paint = document.querySelector(".fa-fill-drip");
 const inputSize = document.querySelector(".inputSize");
 const save = document.querySelector(".fa-save");
+const size = document.querySelector(".size");
 //const clear = document.querySelector(".clear");
 
 let color = "";
@@ -62,12 +63,14 @@ save.addEventListener("click", () => {
 // 펜 크기
 inputSize.addEventListener("input", () => {
     cvs.lineWidth = inputSize.value;
+    size.innerText = inputSize.value;
 });
 
 // 시작 세팅
 function init(){
     cvs.lineWidth = inputSize.value;
     cvs.strokeStyle = "#2d3436";
+    size.innerText = 3;
 }
 
 init();
