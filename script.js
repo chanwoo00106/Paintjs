@@ -9,8 +9,13 @@ const canvas = document.querySelector(".canvas"),
     save = document.querySelector(".fa-save"),
     size = document.querySelector(".size"),
     width = document.querySelector(".wid"),
-    height = document.querySelector(".hei");
+    height = document.querySelector(".hei"),
+    pen = document.querySelector(".fa-pen");
 
+
+let color = "";
+
+let filling = false;
 
 canvas.addEventListener('mousemove', e => {
     let x = e.offsetX;
@@ -35,8 +40,22 @@ Array.from(colors).forEach(color => color.addEventListener("click", chageColor))
 
 //한 색으로 채우기
 paint.addEventListener("click", () => {
-    cvs.fillStyle  = color;
-    cvs.fillRect(0,0,canvas.width,canvas.height);
+    filling = !filling;
+
+    pen.style.display = "inline";
+    paint.style.display = "none";
+});
+pen.addEventListener("click", () => {
+    filling = !filling;
+    pen.style.display = "none";
+    paint.style.display = "inline";
+});
+
+canvas.addEventListener("mousedown", () => {
+    if (filling) {
+        cvs.fillStyle  = color;
+        cvs.fillRect(0,0,canvas.width,canvas.height);
+    }
 });
 
 // 모든 그림 지우기
@@ -79,7 +98,7 @@ function init(){
     cvs.lineWidth = inputSize.value;
     cvs.strokeStyle = "#2d3436";
     size.innerText = 3;
-    let color = "";
+    
 
     canvas.style.width = 1200;
     canvas.style.height = 700;
