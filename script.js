@@ -1,19 +1,16 @@
-const canvas = document.querySelector(".canvas");
-const cvs = canvas.getContext("2d");
-const nowColor = document.querySelector(".nowColor > span");
-const colors = document.querySelectorAll(".li");
-const eraser = document.querySelector(".fa-eraser");
-const trash = document.querySelector(".fa-trash-alt");
-const paint = document.querySelector(".fa-fill-drip");
-const inputSize = document.querySelector(".inputSize");
-const save = document.querySelector(".fa-save");
-const size = document.querySelector(".size");
-//const clear = document.querySelector(".clear");
+const canvas = document.querySelector(".canvas"),
+    cvs = canvas.getContext("2d"),
+    nowColor = document.querySelector(".nowColor > span"),
+    colors = document.querySelectorAll(".li"),
+    eraser = document.querySelector(".fa-eraser"),
+    trash = document.querySelector(".fa-trash-alt"),
+    paint = document.querySelector(".fa-fill-drip"),
+    inputSize = document.querySelector(".inputSize"),
+    save = document.querySelector(".fa-save"),
+    size = document.querySelector(".size"),
+    width = document.querySelector(".wid"),
+    height = document.querySelector(".hei");
 
-let color = "";
-
-canvas.width = 1200;
-canvas.height = 600;
 
 canvas.addEventListener('mousemove', e => {
     let x = e.offsetX;
@@ -49,6 +46,7 @@ trash.addEventListener('click', () => cvs.clearRect(0, 0, canvas.width, canvas.h
 eraser.addEventListener("click", () => {
     cvs.strokeStyle = "#f1f2f6";
     nowColor.style.backgroundColor = "#f1f2f6";
+    color = "#f1f2f6";
 });
 
 // 저장
@@ -66,11 +64,30 @@ inputSize.addEventListener("input", () => {
     size.innerText = inputSize.value;
 });
 
+//화면 크기
+width.addEventListener("input", () => {
+    canvas.style.width = width.value;
+    canvas.width = width.value;
+});
+height.addEventListener("input", () => {
+    canvas.style.height = height.value;
+    canvas.height = height.value;
+});
+
 // 시작 세팅
 function init(){
     cvs.lineWidth = inputSize.value;
     cvs.strokeStyle = "#2d3436";
     size.innerText = 3;
+    let color = "";
+
+    canvas.style.width = 1200;
+    canvas.style.height = 700;
+
+    canvas.width = 1200;
+    canvas.height = 700;
 }
+
+
 
 init();

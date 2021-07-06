@@ -11,3 +11,4 @@
 `offsetX`|x축의 시작 위치
 `offsetY`|Y축의 시작 위치
 `buttons`|1일 때 좌클릭, 2일 때 우클릭
+
