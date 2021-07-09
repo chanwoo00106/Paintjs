@@ -41,7 +41,6 @@ Array.from(colors).forEach(color => color.addEventListener("click", chageColor))
 //한 색으로 채우기
 paint.addEventListener("click", () => {
     filling = !filling;
-
     pen.style.display = "inline";
     paint.style.display = "none";
 });

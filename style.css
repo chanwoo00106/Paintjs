@@ -11,7 +11,7 @@ section {
 
 .menu {background-color: #F8F7FD; padding: 20px; text-align: center; width: 200px;}
 
-.nowColor {margin-bottom: 20px; margin-top: 20px; position: relative;}
+.nowColor {margin-bottom: 20px; margin-top: 20px;}
 
 .nowColor span {
     width: 30px;
@@ -20,8 +20,6 @@ section {
     background-color: #2d3436;
     display: inline-block; 
     border: 1px solid #2d3436;
-    position: absolute;
-    left: 75%;
 }
 
 i {padding: 10px; cursor: pointer; transition: .5s; margin: 10px 0;}
